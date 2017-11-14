@@ -32,6 +32,12 @@ Android malware development plans is simple, I am going to break it into three p
 
 Demo, presentation slides and example will be shared and uploaded on this pages!! YAH!!!
 
+Documentation 
+-----------
+
+I am currently using github pages for adding my brain dump. I understand this is not a sustainable one but it works for now, I guess.
+(https://sdswapz.github.io/poppy_seed/)
+
 License
 -----------
 I have very liberal views around licensing agreements or someone using the code to expand on something I missed out on. I am learning from the community and I want to contribute back to it by removing barrier to entry around what I developed. However if I have any dependencies we all must and have to comply to there licensing agreement. 
