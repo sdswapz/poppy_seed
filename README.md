@@ -1,5 +1,5 @@
 # Poppy Seed - Android Static Analyzer
-
+[[https://github.com/sdswapz/poppy_seeds/docs/images/logo.png]]
 
 What is poppy seed?
 -----------
