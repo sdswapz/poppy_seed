@@ -1,0 +1,41 @@
+{% extends parent_template|default:"base.html" %}
+{% load static %}
+{% block main %}
+<div id="" >
+	<article id="intro" >
+		<div>
+			<h2 class="temp-header">Upload</h2>
+		</div>
+		<p>
+			<form action="." class="dropzone" id="my-awesome-dropzone">{% csrf_token %}
+			</form>
+		</p>
+		<div class="temp-header">
+			<button id="submit-all">Upload all files</button>
+		</div>
+	</article>
+</div>
+
+<script src="{% static "assets/js/jquery.min.js" %}" ></script>
+<script src="{% static "assets/js/skel.min.js" %}"></script>
+<script src="{% static "assets/js/util.js" %}"></script>
+<script src="{% static "assets/js/main.js" %}"></script>
+<script src="{% static "assets/js/dist/dropzone.js" %}"></script>
+<script>
+	Dropzone.options.myAwesomeDropzone = {
+		autoProcessQueue: false,
+		paramName: "file",
+	    dictDefaultMessage: "Choose or drop malware sample file from your computer" ,
+	    init: function() {
+			var submitButton = document.querySelector("#submit-all")
+			myDropzone = this; 
+			submitButton.addEventListener("click", function() {
+				myDropzone.processQueue(); 
+				this.addRemoveLinks = false;
+			});
+				this.on("addedfile", function() {
+				});
+			}
+		};
+</script>
+{% endblock %}

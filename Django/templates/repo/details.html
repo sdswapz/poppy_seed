@@ -1,0 +1,28 @@
+{% extends parent_template|default:"base.html" %}
+{% load static %}
+{% block main %}
+{% for i in info %}
+<section>
+    <h4 class="major">{{i.name}}</h3>
+    <ul class="alt">
+      <li><b>Name: </b> {{i.name}}</li>
+      <li><b>Malware Family Name: </b> {{i.mname}}</li>
+      <li><b>Malware Category: </b> {{i.mtype}}</li>
+      <li><b>Date Found: </b>{{i.data_found}}</li>
+      <li><b>Descrption: </b>{{i.description}}</li>
+      <li><b>Online Resource Found: </b>{{i.url}}</li>
+      <li><b>Source Found: </b>
+        <ul class="alt">
+          <li> </li>
+          <li>  Number of binary found: <a href={{i.binary_path}}> 
+        {{i.num_of_binary}}</a></li>
+        <li>  Number of decomplied files found: <a href={{i.dec_path}}>
+          {{i.num_of_dec}}</a></li>
+         <li>  Number of source files found: <a href={{i.og_source_path}}>
+          {{i.num_of_source}}</a></li> 
+      </ul>
+    </li>
+   </ul>
+</section>
+{% endfor %}
+{% endblock %}

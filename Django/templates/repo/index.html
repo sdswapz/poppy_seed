@@ -1,0 +1,25 @@
+{% extends parent_template|default:"base.html" %}
+{% load static %}
+{% block main %}
+<table>
+	<thead>
+		<thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Date Reported</th>
+      </tr>
+    </thead>
+	</thead>
+	<tbody>
+		{% for i in info %}
+		<tr>
+      <td><a href={{i.name}}>{{i.name}}</td>
+			<td>{{i.description}}</td>
+			<td>{{i.date_found}}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+{% endblock %}

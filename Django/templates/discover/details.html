@@ -1,0 +1,16 @@
+{% extends parent_template|default:"base.html" %}
+{% load static %}
+{% block main %}
+
+{% for i in info %}
+<section>
+    <h4 class="major">{{i.packername}}</h3>
+    <ul class="alt">
+      <li><b>Name: </b> {{i.packername}}</li>
+      <li><b>Packer URL: </b> {{i.packerurl}}</li>
+      <li><b>Resource: </b> {{i.resource}}</li>
+      <li><b>Description: </b>{{i.description}}</li>
+    </ul>
+</section>
+{% endfor %}
+{% endblock %}

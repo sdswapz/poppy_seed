@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Malware Swapnil Deshmukh</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static "assets/css/main.css" %}"/>
+		<!--[if lte IE 9]><link rel="stylesheet" href="{% static "assets/css/ie9.css" %}" /><![endif]-->
+		<link href="{% static "assets/js/dist/basic.css" %}" rel="stylesheet" />
+    	<link href="{% static "assets/js/dist/dropzone.css" %}" rel="stylesheet" />
+		<noscript><link rel="stylesheet" href="{% static "assets/css/noscript.css" %}"/></noscript>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header id="header">
+			<section>
+				<nav>
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/about">About Us</a></li>
+						<li><a href="/contact">Contact</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+					</ul>
+				</nav>
+				</header>
+				<h3 class="major">Android Malware Repository</h3>
+				<div class="table-wrapper">
+		{% block main %}
+		{% endblock main %}
+				</div>
+			</section>
+		</div>
+
+		<div id="bg"></div>	
+	</body>
+</html>
