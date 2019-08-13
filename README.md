@@ -42,10 +42,16 @@ License
 -----------
 I have very liberal views around licensing agreements or someone using the code to expand on something I missed out on. I am learning from the community and I want to contribute back to it by removing barrier to entry around what I developed. However if I have any dependencies we all must and have to comply to there licensing agreement. 
 
-About the author
+About the authors
 -----------
 ![alt text](http://swapnil.me/assets/img/swapnil.jpg)
 Swapnil Deshmukh has over 10 years of information technology and information security experience, including technical expertise, leadership, strategy, operational and risk management. Charged with incubating and evangelizing security-driven, context-driven risk management strategies, policies and practices for emerging technologies. Role also provides opportunity to actively engaged in the industry to maintain peer group dialog, develop partnerships, share subject matter expertise and develop industry best practices. Coauthor of Hacking exposed series. Frequent speaker at conferences and roundtables, and contributor to many Health and FinTech publications.
+
+![alt text]
+Sarath Geethakumar is a security researcher and practitioner with over 15 years of information security experience. He has also co-authored of Hacking exposed mobile: Security Secrets & Solutions. 
+
+
+
 
 Disclaimer
 -----------
