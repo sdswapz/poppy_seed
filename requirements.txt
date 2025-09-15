@@ -1,0 +1,12 @@
+# Poppy Seed - Android Static Analyzer
+# Django Web Framework
+Django>=4.2.0,<5.0.0
+
+# Additional dependencies for Android file parsing
+# Note: The Android parsers are based on Androguard components
+# but have been modified for this project
+
+# For production deployment (optional)
+# gunicorn>=20.0.0
+# psycopg2-binary>=2.8.0  # For PostgreSQL database
+# whitenoise>=5.0.0        # For static file serving

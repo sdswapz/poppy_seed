@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  poppy-seed:
+    build: .
+    container_name: poppy-seed-app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./Django/media:/app/media
+      - ./Django/db.sqlite3:/app/db.sqlite3
+    environment:
+      - DEBUG=True
+      - SECRET_KEY=docker-development-key-change-in-production
+      - ALLOWED_HOSTS=localhost,127.0.0.1,0.0.0.0
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "manage.py", "check", "--deploy"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Optional: Add a reverse proxy for production
+  nginx:
+    image: nginx:alpine
+    container_name: poppy-seed-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./Django/media:/var/www/media:ro
+      - ./Django/templates/static:/var/www/static:ro
+    depends_on:
+      - poppy-seed
+    restart: unless-stopped
+    profiles:
+      - production
+
+volumes:
+  media_data:
+  db_data:
